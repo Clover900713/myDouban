@@ -34,9 +34,22 @@
 
 <style lang="scss" scoped>
 .header-bar {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 998;
+  height: 4.8rem;
+  padding: 0 1.8rem;
+  background: #fff;
+  border-bottom: 0.1rem solid #f3f3f3;
   overflow: hidden;
   .title {
-    float: left;
+    /*float: left;*/
+    flex: 1;
     max-width: 4.6rem;
     max-height: 2.2rem;
     margin: 0;
@@ -48,6 +61,7 @@
   ul {
     list-style: none;
     display: flex;
+    flex: 1;
     justify-content: flex-end;
   }
 
