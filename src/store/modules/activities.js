@@ -7,9 +7,9 @@ const state = {
 };
 
 const mutations = {
-  loadMore(state, payLoad) {
+  loadMore(state, payload) {
     state.skip += 3;
-    state.events = state.events.concat(payLoad.res);
+    state.events = state.events.concat(payload.res);
   },
 };
 
@@ -18,15 +18,13 @@ const actions = {
     request
       .get('https://api.douban.com/v2/event/list?loc=108288&start=' +
       state.skip + '$count=3')
-      .use(jsonp({timeout: 10000}))
+      .use(jsonp({ timeout: 10000 }))
       .end((err, res) => {
         if (!err) {
-          console.log(res);
-
-          commit({
-            type: 'loadMore',
-            payLoad: res,
+          commit('loadMore', {
+            res: res.body.events,
           });
+          console.log(res.body.events);
         }
       });
   },

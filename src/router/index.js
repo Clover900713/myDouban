@@ -7,6 +7,7 @@ import BookView from '../views/BookView';
 import GroupView from '../views/GroupView';
 import BroadcastView from '../views/BroadcastView';
 import SearchView from '../views/SearchView';
+import DetailView from '../views/DetailView';
 
 Vue.use(Router);
 
@@ -49,6 +50,11 @@ export default new Router({
           name: 'BroadcastView',
           component: BroadcastView,
         },
+        {
+          path: 'detail/:id',
+          name: 'DetailView',
+          component: DetailView,
+        }
       ],
     },
     {

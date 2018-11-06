@@ -34,7 +34,7 @@
 
 <style lang="scss" scoped>
 .header-bar {
-  position: absolute;
+  position: fixed;
   display: flex;
   align-items: center;
   top: 0;
