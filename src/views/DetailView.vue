@@ -83,6 +83,36 @@ export default {
 };
 </script>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
+  .detail-view {
+    margin-top: 4.8rem;
+
+    .detail-view__info {
+      font-size: 1.5rem;
+      p {
+        padding-top: 1rem;
+        font-weight: bold;
+      }
+
+      .detail-view__badge {
+        background-color: #ff8263;
+        color: #fff;
+        padding: 0.2rem 0.3rem;
+        border-radius: 0.2rem;
+        font-weight: normal;
+      }
+    }
+
+    .detail-view__poster {
+      width: 100%;
+      text-align: center;
+
+      img {
+        width: 70%;
+        height: auto;
+      }
+    }
+  }
+
 
 </style>
